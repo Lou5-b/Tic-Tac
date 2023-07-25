@@ -1,4 +1,24 @@
 const Gameboard = (function() {
+    let name = prompt("Player Name?")
+    let  nameplacement = document.getElementById("player-name")
+    nameplacement.textContent = name
+    
+    let gamebutton = document.getElementById("restart")
+    gamebutton.style.visibility = 'hidden'
+
+    gamebutton.addEventListener('click', function (e) {
+        gamebutton.style.visibility = 'hidden'
+        slot1.textContent = ""
+        slot2.textContent = ""
+        slot3.textContent = ""
+        slot4.textContent = ""
+        slot5.textContent = ""
+        slot6.textContent = ""
+        slot7.textContent = ""
+        slot8.textContent = ""
+        slot9.textContent = ""
+    })
+
     let board = new Array("","","","","","","","","")
     let compchoice = (function () {
         if (slot1.textContent == "") {
@@ -45,18 +65,25 @@ const Gameboard = (function() {
     let gamedecision = (function() {
         if (slot1.textContent == "X" && slot4.textContent == "X" && slot7.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot1.textContent == "X" && slot2.textContent == "X" && slot3.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot3.textContent == "X" && slot6.textContent == "X" && slot9.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot7.textContent == "X" && slot8.textContent == "X" && slot9.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot2.textContent == "X" && slot5.textContent == "X" && slot8.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot1.textContent == "X" && slot5.textContent == "X" && slot9.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot3.textContent == "X" && slot5.textContent == "X" && slot7.textContent == "X") {
             alert("YOU WIN")
+            gamebutton.style.visibility = 'visible'
         } else if (slot1.textContent != "" && slot2.textContent != "" && slot3.textContent != "" && slot4.textContent != "" && slot5.textContent != "" && slot6.textContent != "" && slot7.textContent != "" && slot8.textContent != "" && slot9.textContent != "") {
             alert("TIE")
         } else {
@@ -66,18 +93,25 @@ const Gameboard = (function() {
     let cpdecision = (function() {
         if (slot1.textContent == "O" && slot4.textContent == "O" && slot7.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot1.textContent == "O" && slot2.textContent == "O" && slot3.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot3.textContent == "O" && slot6.textContent == "O" && slot9.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot7.textContent == "O" && slot8.textContent == "O" && slot9.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot2.textContent == "O" && slot5.textContent == "O" && slot8.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot1.textContent == "O" && slot5.textContent == "O" && slot9.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else if (slot3.textContent == "O" && slot5.textContent == "O" && slot7.textContent == "O") {
             alert("GAME OVER CP WINs")
+            gamebutton.style.visibility = 'visible'
         } else {
 
         }

@@ -21,3 +21,9 @@ body {
     font-size: 60px;
     font-family: sans-serif;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
